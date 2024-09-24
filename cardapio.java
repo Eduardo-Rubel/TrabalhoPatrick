@@ -10,6 +10,7 @@ public class cardapio {
 
     public void adicionarprato (pratos prato) {
         this.cardapio.add(prato);
+        System.out.println("adicionado com sucesso");
     }
 
     public void removerprato (int codigodoprato) {

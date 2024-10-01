@@ -1,40 +1,34 @@
 package fag;
+
 import java.util.Scanner;
+
+import static fag.Mesa.GerenciamentoMesas.*;
 
 public class Principal {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
-		while(true) {
-			System.out.println(" Sistema de Gerenciamento de Restaurante com Controle de Funcionários e Vendas\n ");
-			System.out.println("      Escolha uma Opcao:\n");
-			System.out.println("\n");
-			System.out.println("    1. Exibir cardápio\n");
-			System.out.println("    2. Adicionar prato\n");
-			System.out.println("    3. Remover prato\n");
-			System.out.println("    4. Fechar Conta da Mesa\n");
-			System.out.println("    5. Sair\n");
-			int opcao = scanner.nextInt();
+		System.out.println("Bem vindo ao restaurante jacoba");
+		System.out.println("Selecione a mesa que deseja");
 
-			switch (opcao) {
-				case 1:
+		Mesa.GerenciamentoMesas gerenciamentoMesas = new Mesa.GerenciamentoMesas();
+		gerenciamentoMesas.adicionarMesas();
+		gerenciamentoMesas.ExibirMesas();
 
-					break;
-				case 2:
-
-					break;
-				case 3:
-
-					break;
-				case 4:
-
-					break;
-				case 5:
-					System.out.println("Saindo...");
-					break;
-				default:
-					System.out.println("Opção inválida.");
+		System.out.println("Selecione o a mesa desejada");
+		int opcao1 = scanner.nextInt();
+		for(Mesa mesas: gerenciamentoMesas.getMesas()) {
+			if(mesas.getNumerodamesa() == opcao1) {
+				if(!mesas.isStatus()){
+					System.out.println("Essa mesa não está disponivel");
+					return;}
+				mesas.setStatus(false);
 			}
 
+
 		}
-	}
+		gerenciamentoMesas.ExibirMesas();
+
+		INSERIR CARDAPIO
+
+		}
 }

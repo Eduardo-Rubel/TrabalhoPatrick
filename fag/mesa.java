@@ -50,7 +50,7 @@ public class Mesa {
     }
 
     public static class GerenciamentoMesas {
-        private List<Mesa> mesas;
+        private static List<Mesa> mesas;
 
 
         public GerenciamentoMesas() {
@@ -62,9 +62,8 @@ public class Mesa {
         }
 
 
-        public void adicionarMesa(int numero, int capacidade, boolean status) {
-            Mesa novaMesa = new Mesa(numero, capacidade, status);
-            mesas.add(novaMesa);
+        public void adicionarMesas() {
+
             mesas.add(new Mesa(1,2,true));
             mesas.add(new Mesa(2,4,false));
             mesas.add(new Mesa(3,4,true));
@@ -77,8 +76,15 @@ public class Mesa {
             mesas.add(new Mesa(10,2,true));
         }
 
+        public static List<Mesa> getMesas() {
+            return mesas;
+        }
 
-        public void exibirMesas() {
+        public static void setMesas(List<Mesa> mesas) {
+            GerenciamentoMesas.mesas = mesas;
+        }
+
+        public static void ExibirMesas() {
             for (Mesa mesa : mesas) {
                 System.out.println(mesa);
             }

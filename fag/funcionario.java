@@ -1,12 +1,12 @@
 package fag;
 
-public class funcionario {
+public class Funcionario {
     private String nome;
     private String idf;
     private String cargo;
     private int totaldevendas;
 
-    public funcionario(String nome, String idf, String cargo, int totaldevendas) {
+    public Funcionario(String nome, String idf, String cargo, int totaldevendas) {
         this.nome = nome;
         this.idf = idf;
         this.cargo = cargo;

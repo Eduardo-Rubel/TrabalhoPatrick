@@ -1,19 +1,19 @@
-package Fag;
+package fag;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class acompdevendas {
+public class AcompDeVendas {
 
-    public class SistemaVendas {
-        private List<funcionarios> funcionarios = new ArrayList<>();
+    public static class SistemaVendas {
+        private List<Funcionario> funcionarios = new ArrayList<>();
 
-        public void adicionarFuncionario(funcionarios funcionario) {
+        public void adicionarFuncionario(Funcionario funcionario) {
         funcionarios.add(funcionario);
         }
         
         public void registrarVenda(String nomeFuncionario, int quantidadeVendas) {
-        for (funcionarios f : funcionarios) {
+        for (Funcionario f : funcionarios) {
         if (f.getNome().equalsIgnoreCase(nomeFuncionario)) {
         int vendasAtuais = f.getTotaldevendas();
         f.setTotaldevendas(vendasAtuais + quantidadeVendas);
@@ -24,7 +24,7 @@ public class acompdevendas {
         }
 
         public void exibirRelatorioVendas() {
-        for (funcionarios f : funcionarios) {
+        for (Funcionario f : funcionarios) {
         System.out.println(f);
     }
     }

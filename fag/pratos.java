@@ -1,12 +1,12 @@
 package fag;
 
-public class pratos {
+public class Pratos {
     private String nomedoprato;
     private int codigodoprato;
     private float preco;
     private boolean disponibilidade;
 
-    public pratos(String nomedoprato, int codigodoprato, float preco, boolean disponibilidade) {
+    public Pratos(String nomedoprato, int codigodoprato, float preco, boolean disponibilidade) {
         this.nomedoprato = nomedoprato;
         this.codigodoprato = codigodoprato;
         this.preco = preco;

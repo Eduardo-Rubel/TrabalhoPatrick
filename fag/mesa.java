@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class mesa {
+public class Mesa {
     public static Scanner scan = new Scanner(System.in);
     private int numerodamesa;
     private int capacidade;
     private boolean status;
 
-    public mesa(int numerodamesa, int capacidade, boolean status) {
+    public Mesa(int numerodamesa, int capacidade, boolean status) {
         this.numerodamesa = numerodamesa;
         this.capacidade = capacidade;
         this.status = status;
@@ -50,36 +50,36 @@ public class mesa {
     }
 
     public static class GerenciamentoMesas {
-        private List<mesa> mesas;
+        private List<Mesa> mesas;
 
 
         public GerenciamentoMesas() {
             this.mesas = new ArrayList<>();
         }
 
-        public void adicionarMesa(mesa mesa) {
+        public void adicionarMesa(Mesa mesa) {
             mesas.add(mesa);
         }
 
 
         public void adicionarMesa(int numero, int capacidade, boolean status) {
-            mesa novaMesa = new mesa(numero, capacidade, status);
+            Mesa novaMesa = new Mesa(numero, capacidade, status);
             mesas.add(novaMesa);
-            mesas.add(new mesa(1,2,true));
-            mesas.add(new mesa(2,4,false));
-            mesas.add(new mesa(3,4,true));
-            mesas.add(new mesa(4,4,false));
-            mesas.add(new mesa(5,6,true));
-            mesas.add(new mesa(6,4,true));
-            mesas.add(new mesa(7,6,false));
-            mesas.add(new mesa(8,4,true));
-            mesas.add(new mesa(9,2,true));
-            mesas.add(new mesa(10,2,true));
+            mesas.add(new Mesa(1,2,true));
+            mesas.add(new Mesa(2,4,false));
+            mesas.add(new Mesa(3,4,true));
+            mesas.add(new Mesa(4,4,false));
+            mesas.add(new Mesa(5,6,true));
+            mesas.add(new Mesa(6,4,true));
+            mesas.add(new Mesa(7,6,false));
+            mesas.add(new Mesa(8,4,true));
+            mesas.add(new Mesa(9,2,true));
+            mesas.add(new Mesa(10,2,true));
         }
 
 
         public void exibirMesas() {
-            for (fag.mesa mesa : mesas) {
+            for (Mesa mesa : mesas) {
                 System.out.println(mesa);
             }
         }

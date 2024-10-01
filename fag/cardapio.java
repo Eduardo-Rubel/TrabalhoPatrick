@@ -4,27 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class cardapio {
-    private List<pratos> cardapio;
+public class Cardapio {
+    private List<Pratos> cardapio;
     Scanner scan = new Scanner(System.in);
 
-    public cardapio() {
+    public Cardapio() {
         this.cardapio = new ArrayList<>();
         adicionarPratosPreDefinidos();
     }
 
     private void adicionarPratosPreDefinidos() {
-        cardapio.add(new pratos("Feijoada", 1, 20, true));
-        cardapio.add(new pratos("Macarronada ao Molho Vermelho", 2, 25, true));
-        cardapio.add(new pratos("Strogonoff", 3, 15, true));
-        cardapio.add(new pratos("Frango Xadrez", 4, 25, true));
-        cardapio.add(new pratos("Lasanha", 5, 35, false));
-        cardapio.add(new pratos("Risoto", 6, 30, false));
+        cardapio.add(new Pratos("Feijoada", 1, 20, true));
+        cardapio.add(new Pratos("Macarronada ao Molho Vermelho", 2, 25, true));
+        cardapio.add(new Pratos("Strogonoff", 3, 15, true));
+        cardapio.add(new Pratos("Frango Xadrez", 4, 25, true));
+        cardapio.add(new Pratos("Lasanha", 5, 35, false));
+        cardapio.add(new Pratos("Risoto", 6, 30, false));
     }
 
     public void exibirCardapio() {
         System.out.println("\n--- Cardápio Atual ---");
-        for (pratos prato : cardapio) {
+        for (Pratos prato : cardapio) {
             System.out.println(prato);
         }
     }
@@ -41,7 +41,7 @@ public class cardapio {
         boolean disponibilidade = scan.nextBoolean();
         scan.nextLine();
 
-        cardapio.add(new pratos(nome, codigo, preco, disponibilidade));
+        cardapio.add(new Pratos(nome, codigo, preco, disponibilidade));
         System.out.println("Prato adicionado com sucesso!");
     }
 
@@ -51,8 +51,8 @@ public class cardapio {
         int codigo = scan.nextInt();
         scan.nextLine();
 
-        pratos pratoParaRemover = null;
-        for (pratos prato : cardapio) {
+        Pratos pratoParaRemover = null;
+        for (Pratos prato : cardapio) {
             if (prato.getCodigodoprato() == codigo) {
                 pratoParaRemover = prato;
                 break;
@@ -73,7 +73,7 @@ public class cardapio {
         int codigo = scan.nextInt();
         scan.nextLine();
 
-        for (pratos prato : cardapio) {
+        for (Pratos prato : cardapio) {
             if (prato.getCodigodoprato() == codigo) {
                 System.out.print("Nova disponibilidade (true/false): ");
                 boolean novaDisponibilidade = scan.nextBoolean();
@@ -91,7 +91,7 @@ public class cardapio {
         System.out.print("Digite o nome do prato: ");
         String nome = scan.nextLine();
 
-        for (pratos prato : cardapio) {
+        for (Pratos prato : cardapio) {
             if (prato.getNomedoprato().equalsIgnoreCase(nome)) {
                 System.out.println(prato);
                 return;
@@ -102,7 +102,7 @@ public class cardapio {
     }
 
     public static void main(String[] args) {
-        fag.cardapio gerenciador = new cardapio();
+        Cardapio gerenciador = new Cardapio();
         Scanner scanner = new Scanner(System.in);
 
         while (true) {

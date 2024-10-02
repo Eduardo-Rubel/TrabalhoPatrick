@@ -47,11 +47,11 @@ public class Pratos {
 
     @Override
     public String toString() {
-        return "CARDAPIO" +
-                "nomedoprato = ' " + nomedoprato + '\'' +
-                ", codigodoprato = " + codigodoprato +
-                ", preco = " + preco +
-                ", disponibilidade =" + disponibilidade +
+        return "Prato{" +
+                "Nome do prato='" + nomedoprato + '\'' +
+                ", Código do prato=" + codigodoprato +
+                ", Preço=" + preco +
+                ", Disponibilidade=" + disponibilidade +
                 '}';
     }
 }

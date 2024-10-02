@@ -47,6 +47,6 @@ public class Funcionario {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + "ID: " + idf + "Cargo: " + cargo + "Total de vendas: " + totaldevendas;
+        return "Nome: " + nome + ", ID: " + idf + ", Cargo: " + cargo + ", Total de vendas: " + totaldevendas;
     }
 }

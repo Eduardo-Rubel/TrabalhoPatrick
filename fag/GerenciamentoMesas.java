@@ -27,7 +27,7 @@ public class GerenciamentoMesas {
         return mesas;
     }
 
-    public void ExibirMesas() {
+    public void exibirMesas() {
         System.out.println("\n--- Mesas Disponíveis ---");
         for (Mesa mesa : mesas) {
             System.out.println(mesa);
@@ -40,7 +40,7 @@ public class GerenciamentoMesas {
                 return mesa;
             }
         }
-        return null; // Mesa não encontrada
+        return null;
     }
 
     public void atualizarStatusMesa(int numero, boolean status) {
